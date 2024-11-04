@@ -18,7 +18,6 @@ public class Sprint extends TimestampEntry implements HasCode {
     @Code
     @Column(name = "code", nullable = false)
     private String code;
-
     // link to Reference.code with RefType.SPRINT_STATUS
     @Code
     @Column(name = "status_code", nullable = false)

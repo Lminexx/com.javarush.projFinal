@@ -11,8 +11,10 @@ spring:
   config:
     import: "classpath:application-secret.yaml"
   thymeleaf:
-    prefix: classpath:/view/
+    template: classpath:/resources:/view
+    prefix: classpath:/view
     suffix: .html
+    cache: false
   init:
     mode: never
   jpa:
@@ -31,9 +33,10 @@ spring:
         # https://stackoverflow.com/questions/21257819/what-is-the-difference-between-hibernate-jdbc-fetch-size-and-hibernate-jdbc-batc
         jdbc.batch_size: 20
 
+
   liquibase:
     changeLog: "classpath:db/changelog.sql"
-    drop-first: true
+#    drop-first: true
 
   # Jackson Fields Serialization
   jackson:

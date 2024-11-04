@@ -1,4 +1,4 @@
-version: '3'
+version: '3.8'
 
 services:
   nginx:
@@ -52,7 +52,6 @@ services:
       - "8080"
     depends_on:
       - postgresql
-    restart: always
     networks:
       - app-network
 
