@@ -11,8 +11,7 @@ spring:
   config:
     import: "classpath:application-secret.yaml"
   thymeleaf:
-    template: classpath:/resources:/view
-    prefix: classpath:/view
+    prefix: file:/project-jira:/resources:/view
     suffix: .html
     cache: false
   init:
